@@ -6,7 +6,7 @@
 currentFolder = mfilename('fullpath'); % determine the filepath based on where the script locates
 scriptFN = mfilename;
 filePath = erase(erase(currentFolder, scriptFN), strcat('scripts', filesep));
-searchPath = strcat(filePath, 'data', filesep, '\SupFigure8d');
+searchPath = strcat(filePath, 'data', filesep, 'SupFigure8d');
 searchTerm = 'SupFigure8d_betas_arrays2plot.mat'; 
 savePath = strcat(filePath, filesep, 'plots', filesep, 'SupFigure8d', filesep);
 fileNamePrefix = 'SupFigure8';

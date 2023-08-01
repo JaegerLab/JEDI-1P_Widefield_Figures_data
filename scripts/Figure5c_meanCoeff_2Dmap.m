@@ -29,7 +29,7 @@ lineWidth = 1;
 sum_coeff = zeros(50, 50, length(filelist)); % Pre-allocate the array
 
 for fileN = 1:length(filelist)
-fullFileName = strcat(filelist(fileN).folder, '\', filelist(fileN).name);
+fullFileName = strcat(filelist(fileN).folder, filesep, filelist(fileN).name);
 load(fullFileName)
 
 reshaped_coeff_pixel = reshape(pixelWise_cor, 50, 50);
@@ -70,7 +70,9 @@ numLabel = {'1', '2', '3', '4', '5'};
 
 %%
 imshow(I, 'InitialMagnification','fit')
-colormap('Viridis')
+colormap('Viridis') 
+%*** if run on a version of MATLAB where Viridis is not available 
+% either comment the line 73 or replace it with a different colormap
 c = colorbar;
 c.Location = 'westoutside';
 lim = caxis;

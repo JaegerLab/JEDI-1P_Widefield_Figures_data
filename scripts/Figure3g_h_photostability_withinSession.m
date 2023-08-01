@@ -141,7 +141,7 @@ meanRawF_masked_red = zeros(1, length(metaLists));
 meanRawF_masked_green = zeros(1, length(metaLists));
 individualSession = struct('normalized_red', cell(1, length(metaLists)));
 for listN = 1:length(metaLists)
-    load(strcat(metaLists(listN).folder, '\', metaLists(listN).name), 'metaList')
+    load(strcat(metaLists(listN).folder, filesep, metaLists(listN).name), 'metaList')
     RawF_masked_red = arrayfun(@(x) x.RawFluorescence.red.meanRawF_masked, metaList);
     RawF_masked_green = arrayfun(@(x) x.RawFluorescence.green.meanRawF_masked, metaList);
 

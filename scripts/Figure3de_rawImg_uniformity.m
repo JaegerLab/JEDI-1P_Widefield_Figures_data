@@ -43,7 +43,7 @@ for fileN = 1:length(fileListsExp)
     fileFolder = fileListsExp(fileN).folder;
     fileName = fileListsExp(fileN).name;
     %generate full filepath for the file of interest
-    fullFN = strcat(fileFolder, '\', fileName);
+    fullFN = strcat(fileFolder, filesep, fileName);
     
     %load the folder and remove the RawF structure
     fileInfo = load(fullFN);
@@ -94,7 +94,7 @@ for fileN = 1:length(fileListsCtrl)
     fileFolder = fileListsCtrl(fileN).folder;
     fileName = fileListsCtrl(fileN).name;
     %generate full filepath for the file of interest
-    fullFN = strcat(fileFolder, '\', fileName);
+    fullFN = strcat(fileFolder, filesep, fileName);
     
     %load the folder and remove the RawF structure
     fileInfo = load(fullFN);

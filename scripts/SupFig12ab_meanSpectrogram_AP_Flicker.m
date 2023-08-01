@@ -5,8 +5,8 @@
 currentFolder = mfilename('fullpath'); % determine the filepath based on where the script locates
 scriptFN = mfilename;
 filePath = erase(erase(currentFolder, scriptFN), strcat('scripts', filesep));
-searchPath = strcat(filePath, 'data', filesep, '\SupFigure12ab');
-savePath = strcat(filePath, filesep, 'plots', filesep, '\SupFigure12ab', filesep);
+searchPath = strcat(filePath, 'data', filesep, 'SupFigure12ab');
+savePath = strcat(filePath, filesep, 'plots', filesep, 'SupFigure12ab', filesep);
 
 %% Generate save directory if it does not already exist
 if ~isfolder(savePath)

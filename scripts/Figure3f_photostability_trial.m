@@ -27,8 +27,7 @@ lineWidth = 0.5;
 normalizedRawF_traces_masked = zeros(3, 100, 4096);
     fileCounter = 1;
     for fileN = 6:10:length(filelist)
-        filelist(fileN).name
-        load(strcat(filelist(fileN).folder, '\', filelist(fileN).name))
+        load(strcat(filelist(fileN).folder, filesep, filelist(fileN).name))
         if length(metaList) < 100 
             error('There are fewer than 100 trials in this session; choose another session')
             % should only be the case for 3 sessions

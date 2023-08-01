@@ -23,7 +23,7 @@ counter = 1;
 meanRawF_JEDI = zeros(4, 3);
 meanRawF_mCherry = zeros(4, 3);
 for fileN = 1:length(filelist)
-    fullFileName = strcat(filelist(fileN).folder, '\', filelist(fileN).name);
+    fullFileName = strcat(filelist(fileN).folder, filesep, filelist(fileN).name);
     load(fullFileName, 'metaList')
 
     for trialN = 1:length(metaList)
