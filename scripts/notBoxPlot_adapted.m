@@ -1,6 +1,6 @@
 function varargout=notBoxPlot_adapted(y,x, varargin)
 % notBoxPlot - Doesn't plot box plots!
-%
+% Adapted from Rob Campbell (2023). notBoxPlot (https://github.com/raacampbell/notBoxPlot), GitHub. Retrieved August 1, 2023.
 % function notBoxPlot(y,x,'Param1',val1,'Param2',val2,...)
 %
 %

@@ -1,5 +1,6 @@
 function [lineOut, fillOut] = CIshade_methods(amatrix,alpha,acolor,F,smth, lineStyle, varargin)
 % usage: stdshading(amatrix,alpha,acolor,F,smth)
+% Adapted from : Simon Musall (2023). stdshade (https://www.mathworks.com/matlabcentral/fileexchange/29534-stdshade), MATLAB Central File Exchange. Retrieved August 1, 2023
 % plot mean and sem/std coming from a matrix of data, at which each row is an
 % observation. sem/std is shown as shading.
 % - acolor defines the used color (default is red) 
@@ -32,9 +33,9 @@ arraySize = size(amatrix); % assume the first dimension represents sample size
 sampleSize = arraySize(1);
 fprintf(strcat("Sample length is ", string(sampleSize), '\n'))
 
-amean = nanmean(amatrix,1); %get man over first dimension
+amean = mean(amatrix,1); %get man over first dimension
 if smth > 1
-    amean = boxFilter(nanmean(amatrix,1),smth); %use boxfilter to smooth data
+    amean = boxFilter(mean(amatrix,1),smth); %use boxfilter to smooth data
 end
 astd = z * std(amatrix,[],1)/sqrt(sampleSize); % to get std shading
 % astd = nanstd(amatrix,[],1)/sqrt(size(amatrix,1)); % to get sem shading
