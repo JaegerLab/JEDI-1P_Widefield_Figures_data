@@ -1,4 +1,4 @@
-# JEDI-1P_Widefiled_Figures_data_scripts
+# JEDI-1P_Widefield_Figures_data_scripts
 This repository contains data and scripts used to generate figures (Fig 3-6, Supplementary Fig 8-12) related to in vivo widefield imaging in manuscript: detecting rapid pan-cortical voltage dynamics in vivo under widefield one-photon imaging with a brighter and faster voltage indicator. 
 
 ## Dependencies: 
